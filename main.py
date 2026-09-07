@@ -80,4 +80,4 @@ def traiter_reservation(nom: str = Form(...), service: str = Form(...), date: st
 
 @app.get("/rendez-vous")
 def voir_rendez_vous():
-    return {"total": len(rendez_vous_db), "liste": rendez_vous_d
+    return {"total": len(rendez_vous_db), "liste": rendez_vous_db}
