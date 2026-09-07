@@ -51,7 +51,6 @@ def afficher_formulaire():
 
 @app.post("/reserver", response_class=HTMLResponse)
 def traiter_reservation(nom: str = Form(...), service: str = Form(...), date: str = Form(...)):
-    # On enregistre le rendez-vous dans notre liste
     rdv = {"nom": nom, "service": service, "date": date}
     rendez_vous_db.append(rdv)
     
@@ -81,4 +80,4 @@ def traiter_reservation(nom: str = Form(...), service: str = Form(...), date: st
 
 @app.get("/rendez-vous")
 def voir_rendez_vous():
-    return {"total": len(rendez_vous_db), "liste": rendez_vous_db}
+    return {"total": len(rendez_vous_db), "liste": rendez_vous_d
